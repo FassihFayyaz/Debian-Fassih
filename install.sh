@@ -22,7 +22,7 @@ xdg-user-dirs-update
 
 # Install Qtile Window Manager
 cd scripts
-sudo sh qtile-commands
+sh qtile-commands
 cd ..
 
 # Packages needed for window manager installation

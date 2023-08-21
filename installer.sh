@@ -72,7 +72,7 @@ systemctl set-default graphical.target
 
 # Install Qtile
 cd scripts
-sudo sh qtile-commands
+sh qtile-commands
 cd ..
 
 # copy my configuration files into the ~/.config directory
