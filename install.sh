@@ -21,7 +21,9 @@ sudo nala install -y xorg xbacklight xbindkeys xvkbd xinput build-essential
 xdg-user-dirs-update
 
 # Install Qtile Window Manager
-bash home/$username/debian-config/scripts/qtile-commands
+cd scripts
+sudo sh qtile-commands
+cd ..
 
 # Packages needed for window manager installation
 sudo nala install -y picom rofi dunst libnotify-bin unzip thunar thunar-archive-plugin thunar-volman file-roller alacritty
