@@ -10,6 +10,9 @@ sudo apt upgrade -y
 # Install nala
 apt install nala -y
 
+# Create folders in user directory (eg. Documents,Downloads,etc.)
+xdg-user-dirs-update
+
 # Making .config and Moving config files and background to Pictures
 cd $builddir
 mkdir -p /home/$username/.config
