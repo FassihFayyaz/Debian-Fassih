@@ -8,14 +8,14 @@ sudo apt update
 sudo apt upgrade -y
 
 # Install nala
-#apt install nala -y
+apt install nala -y
 
 # Fetch Latest Mirrors
-#sudo nala fetch
+sudo nala fetch
 
 # display server installation and build-essentails installation
 
-#sudo nala install -y xorg xbacklight xbindkeys xvkbd xinput build-essential
+sudo nala install -y xorg xbacklight xbindkeys xvkbd xinput build-essential
 
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
@@ -23,14 +23,21 @@ xdg-user-dirs-update
 # Install Qtile Window Manager
 bash home/$username/debian-config/scripts/qtile-commands
 
-# My Favs
-
-#sudo nala install thunar, alacritty, picom, firefox-esr, rofi lightdm lightdm-gtk-greeter-settings -y
+# Packages needed for window manager installation
+sudo nala install -y picom rofi dunst libnotify-bin unzip thunar thunar-archive-plugin thunar-volman file-roller alacritty
 
 # XFCE4 Minimal
-# sudo apt install -y xfce4 xfce4-goodies
+# sudo nala install -y xfce4 xfce4-goodies
+
+# Network /System Events/Sound Packages/Appearance management/ Lightdm Console Display Manager
+sudo nala install -y dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backends xfce4-power-manager policykit-1-gnome network-manager network-manager-gnome pulseaudio alsa-utils pavucontrol volumeicon-alsa pamixer network-manager network-manager-gnome lxappearance feh lightdm lightdm-gtk-greeter-settings
+
+sudo systemctl enable avahi-daemon
+sudo systemctl enable acpid
+sudo systemctl enable lightdm
 
 # copy my configuration files into the ~/.config directory
-cp dotconfig/* /home/$username/.config/
+sudo mkdir -p /home/$username/.config
+sudo cp -r dotconfig/* /home/$username/.config/
 
-sudo systemctl enable lightdm
+printf "\e[1;32mYou can now reboot! Thanks you.\e[0m\n"
