@@ -29,4 +29,4 @@ Keywords=wm;tiling
 EOF
 sudo cp ./temp /usr/share/xsessions/qtile.desktop;rm ./temp
 u=$USER
-sudo echo "Exec=/home/$u/.local/bin/qtile start" | sudo tee -a /usr/share/xsessions/qtile.desktop
+sudo echo "Exec=/usr/local/bin/qtile start" | sudo tee -a /usr/share/xsessions/qtile.desktop
