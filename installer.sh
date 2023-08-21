@@ -10,12 +10,16 @@ sudo apt upgrade -y
 # Install nala
 apt install nala -y
 
-# Making Directories
+# Making .config and Moving config files and background to Pictures
 cd $builddir
 mkdir -p /home/$username/.config
 mkdir -p /home/$username/.fonts
 mkdir -p /home/$username/Pictures
 mkdir -p /home/$username/Pictures/backgrounds
+cp -R dotconfig/* /home/$username/.config/
+cp wallpaper.png /home/$username/Pictures/backgrounds/
+mv user-dirs.dirs /home/$username/.config
+chown -R $username:$username /home/$username
 
 # Installing Essential Programs 
 nala install feh alacritty rofi picom thunar nitrogen lxpolkit x11-xserver-utils unzip wget pulseaudio xorg pavucontrol build-essential libx11-dev libxft-dev libxinerama-dev -y
@@ -66,9 +70,3 @@ sudo sh scripts/qtile-commands
 
 # Use nala
 sudo sh scripts/usenala
-
-# Making .config and Moving config files and background to Pictures
-cp -R dotconfig/* /home/$username/.config/
-cp wallpaper.png /home/$username/Pictures/backgrounds/
-mv user-dirs.dirs /home/$username/.config
-chown -R $username:$username /home/$username
