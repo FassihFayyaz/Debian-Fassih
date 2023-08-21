@@ -10,19 +10,24 @@ sudo apt upgrade -y
 # Install nala
 apt install nala -y
 
+# Fetch Latest/Fastest Mirrors
+sudo nala fetch
+
+# XFCE4 Minimal
+# sudo nala install -y xfce4 xfce4-goodies
+
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
 
 # Making .config and Moving config files and background to Pictures
 cd $builddir
-mkdir -p /home/$username/.config
-mkdir -p /home/$username/.fonts
-mkdir -p /home/$username/Pictures
-mkdir -p /home/$username/Pictures/backgrounds
-cp -R dotconfig/* /home/$username/.config/
-cp wallpaper.png /home/$username/Pictures/backgrounds/
-mv user-dirs.dirs /home/$username/.config
-chown -R $username:$username /home/$username
+sudo mkdir -p /home/$username/.config
+sudo mkdir -p /home/$username/.fonts
+sudo mkdir -p /home/$username/Pictures
+sudo mkdir -p /home/$username/Pictures/backgrounds
+sudo cp wallpaper.png /home/$username/Pictures/backgrounds/
+sudo mv user-dirs.dirs /home/$username/.config
+sudo chown -R $username:$username /home/$username
 
 # Installing Essential Programs 
 nala install feh alacritty rofi picom thunar nitrogen lxpolkit x11-xserver-utils unzip wget pulseaudio xorg pavucontrol build-essential libx11-dev libxft-dev libxinerama-dev -y
@@ -69,7 +74,11 @@ systemctl enable lightdm
 systemctl set-default graphical.target
 
 # Install Qtile
-sudo sh scripts/qtile-commands
+cd scripts
+sudo sh qtile-commands
+cd ..
 
-# Use nala
-sudo sh scripts/usenala
+# copy my configuration files into the ~/.config directory
+sudo cp -r dotconfig/* /home/$username/.config/
+
+printf "\e[1;32mYou can now reboot! Thanks you.\e[0m\n"
