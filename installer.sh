@@ -71,9 +71,7 @@ systemctl enable lightdm
 systemctl set-default graphical.target
 
 # Install Qtile
-cd scripts
-sh qtile-commands
-cd ..
+sh scripts/qtile-commands
 
 # copy my configuration files into the ~/.config directory
 sudo cp -r dotconfig/* /home/$username/.config/

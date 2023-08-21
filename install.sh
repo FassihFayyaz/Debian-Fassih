@@ -21,9 +21,7 @@ sudo nala install -y xorg xbacklight xbindkeys xvkbd xinput build-essential
 xdg-user-dirs-update
 
 # Install Qtile Window Manager
-cd scripts
-sh qtile-commands
-cd ..
+sh scripts/qtile-commands
 
 # Packages needed for window manager installation
 sudo nala install -y picom rofi dunst libnotify-bin unzip thunar thunar-archive-plugin thunar-volman file-roller alacritty
