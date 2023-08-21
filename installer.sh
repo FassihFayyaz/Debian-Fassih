@@ -25,9 +25,9 @@ sudo mkdir -p /home/$username/.config
 sudo mkdir -p /home/$username/.fonts
 sudo mkdir -p /home/$username/Pictures
 sudo mkdir -p /home/$username/Pictures/backgrounds
-sudo cp wallpaper.png /home/$username/Pictures/backgrounds/
-sudo mv user-dirs.dirs /home/$username/.config
-sudo chown -R $username:$username /home/$username
+cp wallpaper.png /home/$username/Pictures/backgrounds/
+mv user-dirs.dirs /home/$username/.config
+chown -R $username:$username /home/$username
 
 # Installing Essential Programs 
 nala install feh alacritty rofi picom thunar nitrogen lxpolkit x11-xserver-utils unzip wget pulseaudio xorg pavucontrol build-essential libx11-dev libxft-dev libxinerama-dev -y
