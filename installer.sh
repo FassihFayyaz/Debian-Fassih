@@ -31,7 +31,7 @@ chown -R $username:$username /home/$username
 # Installing Essential Programs 
 nala install feh alacritty rofi picom thunar nitrogen lxpolkit x11-xserver-utils unzip wget pulseaudio xorg pavucontrol build-essential libx11-dev libxft-dev libxinerama-dev -y
 # Installing Other less important Programs
-nala install neofetch firefox-esr flameshot psmisc mangohud lxappearance papirus-icon-theme lxappearance fonts-noto-color-emoji lightdm -y
+nala install neofetch flameshot psmisc mangohud lxappearance papirus-icon-theme lxappearance fonts-noto-color-emoji lightdm -y
 
 # Download Nordic Theme
 cd /usr/share/themes/
