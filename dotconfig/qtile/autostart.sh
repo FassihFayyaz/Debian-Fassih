@@ -7,6 +7,7 @@ elif xrandr | grep "1366x768"; then
 elif xrandr | grep "1920x1080"; then
     xrandr -s 1920x1080 || echo "Cannot set 1920x1080 resolution.";
 else echo "Could not set a resolution."
+fi
 
 picom &
 copyq &

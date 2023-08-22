@@ -73,7 +73,13 @@ systemctl set-default graphical.target
 
 # Install Qtile
 cd $builddir
-sh scripts/qtile-commands
+sh scripts/qtile-install
+
+#Install Qtile-Extras
+cd $builddir
+
+
+# Use Nala
 cd $builddir
 sh scripts/usenala
 
