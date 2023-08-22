@@ -5,7 +5,7 @@ sudo nala install libconfig-dev libdbus-1-dev libegl-dev libev-dev libgl-dev lib
 # Clone the Picom Source Code from GitHub
 git clone https://github.com/yshui/picom.git
 
-cd picom-install
+cd picom
 
 # Building Package
 meson setup --buildtype=release build
