@@ -75,9 +75,13 @@ systemctl set-default graphical.target
 cd $builddir
 sh scripts/qtile-install
 
-#Install Qtile-Extras
+# Install Qtile-Extras
 cd $builddir
 sh scripts/qtile-extras
+
+# Installing Picom
+cd $builddir
+sh scripts/picom-install
 
 # Use Nala
 cd $builddir
