@@ -30,3 +30,5 @@ EOF
 sudo cp ./temp /usr/share/xsessions/qtile.desktop;rm ./temp
 u=$USER
 sudo echo "Exec=/home/fassih/.local/bin/qtile start" | sudo tee -a /usr/share/xsessions/qtile.desktop
+
+pip install qtile-extras
