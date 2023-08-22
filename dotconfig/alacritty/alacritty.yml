@@ -912,15 +912,6 @@ shell:
 key_bindings:
   - { key: V,        mods: Control, action: Paste                        }
   - { key: C,        mods: Control, action: Copy                         }
-  - { key: H,        mods: Control, action: Hide                         }
-  - { key: W,        mods: Control, action: Quit                         }
-  - { key: Back,                    chars: "\x7f"                        }
-  - { key: Insert,                  chars: "\x1b[2~"                     }
-  - { key: Delete,                  chars: "\x1b[3~"                     }
-  - { key: Left,                    chars: "\x1b[D",   mode: ~AppCursor  }
-  - { key: Left,                    chars: "\x1bOD",   mode: AppCursor   }
-  - { key: Right,                   chars: "\x1b[C",   mode: ~AppCursor  }
-  - { key: Right,                   chars: "\x1bOC",   mode: AppCursor   }
   # https://github.com/alacritty/alacritty/issues/93
   # Alt-F to move forward by word.
   - { key: F,  mods: Alt,           chars: "\x1bf"                       }
