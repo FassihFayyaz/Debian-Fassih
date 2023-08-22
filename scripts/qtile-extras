@@ -1,0 +1,6 @@
+# Clone the Qtile Source Code from GitHub
+git clone https://github.com/elParaguayo/qtile-extras.git
+
+# Install Qtile
+cd qtile-extras
+pip install .
