@@ -77,7 +77,7 @@ sh scripts/qtile-install
 
 # Install Qtile-Extras
 cd $builddir
-sh scripts/qtile-extras
+sh scripts/qtile-extras-install
 
 # Installing Picom
 cd $builddir
