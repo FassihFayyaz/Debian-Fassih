@@ -5,7 +5,7 @@
 
 # Check if Script is Run as Root
 if [[ $EUID -ne 0 ]]; then
-  echo "You must be a root user to run this script, please run sudo ./install.sh" 2>&1
+  echo "You must be a root user to run this script, please run sudo ./installer.sh" 2>&1
   exit 1
 fi
 
@@ -90,5 +90,9 @@ sh scripts/usenala
 # copy my configuration files into the ~/.config directory
 cd $builddir
 cp -r dotconfig/* /home/$username/.config/
+
+# Update Packages
+nala update
+apt autoremove
 
 printf "\e[1;32mYou can now reboot! Thanks you.\e[0m\n"
