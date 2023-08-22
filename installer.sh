@@ -11,7 +11,7 @@ sudo apt upgrade -y
 apt install nala -y
 
 # Fetch Latest/Fastest Mirrors
-sudo nala fetch
+sudo nala fetch --debian bookworm --https-only
 
 # XFCE4 Minimal
 # sudo nala install -y xfce4 xfce4-goodies
