@@ -89,6 +89,6 @@ sh scripts/usenala
 
 # copy my configuration files into the ~/.config directory
 cd $builddir
-sudo cp -r dotconfig/* /home/$username/.config/
+cp -r dotconfig/* /home/$username/.config/
 
 printf "\e[1;32mYou can now reboot! Thanks you.\e[0m\n"
