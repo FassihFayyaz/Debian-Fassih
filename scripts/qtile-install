@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 # Remove the EXTERNALLY-MANAGED file so pip works again
-rm /usr/lib/python3.11/EXTERNALLY-MANAGED
+sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
 
 # Dependencies
-apt install -y python3-full python3-pip libpangocairo-1.0-0 python3-cffi python3-xcffib git sxhkd
+sudo apt install -y python3-full python3-pip libpangocairo-1.0-0 python3-cffi python3-xcffib git sxhkd
 
 # Install cairocffi using pip
 pip install --no-cache-dir cairocffi
@@ -27,6 +27,6 @@ Comment=Qtile Session
 Type=Application
 Keywords=wm;tiling
 EOF
-cp ./temp /usr/share/xsessions/qtile.desktop;rm ./temp
+sudo cp ./temp /usr/share/xsessions/qtile.desktop;rm ./temp
 u=$USER
 echo "Exec=/home/$u/.local/bin/qtile start" | sudo tee -a /usr/share/xsessions/qtile.desktop
