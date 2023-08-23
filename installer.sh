@@ -92,7 +92,7 @@ cd $builddir
 cp -r dotconfig/* /home/$username/.config/
 
 # Update Packages
-nala update
+apt update
 apt autoremove
 
 printf "\e[1;32mYou can now reboot! Thanks you.\e[0m\n"
