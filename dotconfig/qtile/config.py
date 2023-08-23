@@ -45,7 +45,7 @@ def add_treetab_section(layout):
 
 mod = "mod4"
 myTerm = "alacritty"
-myBrowser = "snap run firefox"
+myBrowser = "firefox"
 
 # Rofi Scripts
 rofi_launcher = "sh /home/fassih/.config/rofi/launchers/type-1/./launcher.sh"
