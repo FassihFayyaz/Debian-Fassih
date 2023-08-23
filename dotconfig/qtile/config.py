@@ -48,8 +48,8 @@ myTerm = "alacritty"
 myBrowser = "snap run firefox"
 
 # Rofi Scripts
-rofi_launcher = "sh /home/fassih/.config/rofi/scripts/launcher_t1"
-rofi_powermenu = "sh /home/fassih/.config/rofi/scripts/powermenu_t4"
+rofi_launcher = "sh /home/fassih/.config/rofi/launchers/type-1/./launcher.sh"
+rofi_powermenu = "sh /home/fassih/.config/rofi/powermenu/type-4/./powermenu.sh"
 applet_volume = "/home/fassih/.config/rofi/applets/bin/./volume.sh"
 applet_screenshot = "/home/fassih/.config/rofi/applets/bin/./screenshot.sh"
 applet_appasroot = "/home/fassih/.config/rofi/applets/bin/./appasroot.sh"
