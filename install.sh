@@ -6,15 +6,15 @@
 username=$(id -u -n 1000)
 builddir=$(pwd)
 
-# # Update packages list and update system
-# apt update
-# apt upgrade -y
+# Update packages list and update system
+apt update
+apt upgrade -y
 
-# # Install nala
-# apt install nala -y
+# Install nala
+apt install nala -y
 
-# # Fetch Latest/Fastest Mirrors
-# nala fetch --debian bookworm --https-only
+# Fetch Latest/Fastest Mirrors
+nala fetch --debian bookworm --https-only
 
 # XFCE4 Minimal
 # sudo nala install -y xfce4 xfce4-goodies
@@ -28,39 +28,39 @@ mkdir -p /home/$username/Pictures/backgrounds
 cp wallpaper.png /home/$username/Pictures/backgrounds/
 chown -R $username:$username /home/$username
 
-# # Installing Essential Programs 
-# sudo nala install feh alacritty rofi dunst copyq thunar nitrogen lxpolkit x11-xserver-utils unzip wget pulseaudio pavucontrol build-essential libx11-dev libxft-dev libxinerama-dev -y
-# # Installing Other less important Programs
-# sudo nala install neofetch arandr flameshot psmisc lxappearance papirus-icon-theme lxappearance fonts-noto-color-emoji lightdm -y
+# Installing Essential Programs 
+sudo nala install feh alacritty rofi dunst copyq thunar nitrogen lxpolkit x11-xserver-utils unzip wget pulseaudio pavucontrol build-essential libx11-dev libxft-dev libxinerama-dev -y
+# Installing Other less important Programs
+sudo nala install neofetch arandr flameshot psmisc lxappearance papirus-icon-theme lxappearance fonts-noto-color-emoji lightdm -y
 
-# # Download Nordic Theme
-# cd /usr/share/themes/
-# git clone https://github.com/EliverLara/Nordic.git
+# Download Nordic Theme
+cd /usr/share/themes/
+git clone https://github.com/EliverLara/Nordic.git
 
-# # Installing fonts
-# cd $builddir
-# sudo nala install fonts-font-awesome -y
-# wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
-# unzip FiraCode.zip -d /home/$username/.fonts
-# wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
-# unzip Meslo.zip -d /home/$username/.fonts
-# chown $username:$username /home/$username/.fonts/*
+# Installing fonts
+cd $builddir
+sudo nala install fonts-font-awesome -y
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
+unzip FiraCode.zip -d /home/$username/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
+unzip Meslo.zip -d /home/$username/.fonts
+chown $username:$username /home/$username/.fonts/*
 
-# # Reloading Font
-# fc-cache -vf
-# # Removing zip Files
-# rm ./FiraCode.zip ./Meslo.zip
+# Reloading Font
+fc-cache -vf
+# Removing zip Files
+rm ./FiraCode.zip ./Meslo.zip
 
-# # Install Nordzy cursor
-# git clone https://github.com/alvatip/Nordzy-cursors
-# cd Nordzy-cursors
-# ./install.sh
-# rm -rf Nordzy-cursors
-# sudo nala update
+# Install Nordzy cursor
+git clone https://github.com/alvatip/Nordzy-cursors
+cd Nordzy-cursors
+./install.sh
+rm -rf Nordzy-cursors
+sudo nala update
 
-# # Enable graphical login and change target from CLI to GUI
-# systemctl enable lightdm
-# systemctl set-default graphical.target
+# Enable graphical login and change target from CLI to GUI
+systemctl enable lightdm
+systemctl set-default graphical.target
 
 # # Install Qtile
 # cd $builddir
