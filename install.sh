@@ -62,28 +62,28 @@ sudo nala update
 systemctl enable lightdm
 systemctl set-default graphical.target
 
-# # Install Qtile
-# cd $builddir
-# sh scripts/qtile-install
+# Install Qtile
+cd $builddir
+sh scripts/qtile-install
 
-# # Install Qtile-Extras
-# cd $builddir
-# sh scripts/qtile-extras-install
+# Install Qtile-Extras
+cd $builddir
+sh scripts/qtile-extras-install
 
-# # Installing Picom
-# cd $builddir
-# sh scripts/picom-install
+# Installing Picom
+cd $builddir
+sh scripts/picom-install
 
-# # Use Nala
-# cd $builddir
-# sh scripts/usenala
+# Use Nala
+cd $builddir
+sudo sh scripts/usenala
 
-# # copy my configuration files into the ~/.config directory
-# cd $builddir
-# cp -r dotconfig/* /home/$username/.config/
+# copy my configuration files into the ~/.config directory
+cd $builddir
+cp -r dotconfig/* /home/$username/.config/
 
-# # Update Packages
-# apt update
-# apt autoremove
+# Update Packages
+apt update
+apt autoremove
 
-# printf "\e[1;32mYou can now reboot! Thanks you.\e[0m\n"
+printf "\e[1;32mYou can now reboot! Thanks you.\e[0m\n"
