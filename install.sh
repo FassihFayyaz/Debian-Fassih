@@ -7,14 +7,14 @@ username=$(id -u -n 1000)
 builddir=$(pwd)
 
 # Update packages list and update system
-apt update
-apt upgrade -y
+sudo apt update
+sudo apt upgrade -y
 
 # Install nala
-apt install nala -y
+sudo apt install nala -y
 
 # Fetch Latest/Fastest Mirrors
-nala fetch --debian bookworm --https-only
+sudo nala fetch --debian bookworm --https-only
 
 # XFCE4 Minimal
 # sudo nala install -y xfce4 xfce4-goodies
@@ -35,7 +35,7 @@ sudo nala install neofetch arandr flameshot psmisc lxappearance papirus-icon-the
 
 # Download Nordic Theme
 cd /usr/share/themes/
-git clone https://github.com/EliverLara/Nordic.git
+sudo git clone https://github.com/EliverLara/Nordic.git
 
 # Installing fonts
 cd $builddir
@@ -71,8 +71,8 @@ cd $builddir
 sh scripts/qtile-extras-install
 
 # Installing Picom
-cd $builddir
-sh scripts/picom-install
+#cd $builddir
+#sh scripts/picom-install
 
 # Use Nala
 cd $builddir
@@ -83,7 +83,7 @@ cd $builddir
 cp -r dotconfig/* /home/$username/.config/
 
 # Update Packages
-apt update
-apt autoremove
+sudo apt update
+sudo apt autoremove
 
 printf "\e[1;32mYou can now reboot! Thanks you.\e[0m\n"
