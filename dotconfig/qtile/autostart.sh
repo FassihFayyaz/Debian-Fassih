@@ -9,6 +9,7 @@ elif xrandr | grep "1920x1080"; then
 else echo "Could not set a resolution."
 fi
 
+flameshot &
 picom &
 copyq &
 dunst &

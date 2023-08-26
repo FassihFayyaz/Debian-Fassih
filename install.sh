@@ -29,7 +29,7 @@ cp wallpaper.png /home/$username/Pictures/backgrounds/
 chown -R $username:$username /home/$username
 
 # Installing Essential Programs 
-sudo nala install feh alacritty rofi dunst copyq thunar nitrogen lxpolkit x11-xserver-utils unzip wget pulseaudio pavucontrol build-essential libx11-dev libxft-dev libxinerama-dev -y
+sudo nala install feh alacritty rofi dunst copyq thunar thunar-archive-plugin nitrogen lxpolkit x11-xserver-utils unzip wget pulseaudio pavucontrol build-essential libx11-dev libxft-dev libxinerama-dev -y
 # Installing Other less important Programs
 sudo nala install neofetch arandr flameshot psmisc lxappearance papirus-icon-theme lxappearance fonts-noto-color-emoji lightdm network-manager unzip preload curl htop -y
 
