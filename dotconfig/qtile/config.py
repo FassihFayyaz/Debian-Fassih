@@ -45,7 +45,9 @@ def add_treetab_section(layout):
 
 mod = "mod4"
 myTerm = "alacritty"
-myBrowser = "firefox"
+myBrowser = "flatpak run org.mozilla.firefox"
+Obsidian = "flatpak run md.obsidian.Obsidian"
+vsCode = "flatpak run com.visualstudio.code"
 
 # Rofi Scripts
 rofi_launcher = "sh /home/fassih/.config/rofi/launchers/type-1/./launcher.sh"
@@ -62,12 +64,16 @@ keys = [
     Key([mod], "Return", lazy.spawn(myTerm), desc="Terminal"),
     Key([mod, "shift"], "Return", lazy.spawn(rofi_launcher), desc="Run Launcher"),
     Key([mod], "b", lazy.spawn(myBrowser), desc="Web Browser"),
+    Key([mod], "e", lazy.spawn("thunar"), desc="File Manager"),
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "shift"], "q", lazy.spawn(rofi_powermenu), desc="Logout menu"),
+    Key([mod, "shift"], "s", lazy.spawn("flameshot gui"), desc="Logout menu"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "v", lazy.spawn("copyq menu"), desc="Spawns Clipboard Manager"),
+    Key([mod], "c", lazy.spawn(vsCode), desc="Spawns VsCode"),
+    Key([mod], "o", lazy.spawn(Obsidian), desc="Spawns Obsidian"),
 
     # Switch between windows
     # Some layouts like 'monadtall' only need to use j/k to move
