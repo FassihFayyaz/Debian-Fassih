@@ -14,3 +14,5 @@ picom &
 copyq &
 dunst &
 nitrogen --restore &
+rnnoise activate &
+flatpak run org.qbittorrent.qBittorrent &
