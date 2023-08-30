@@ -13,6 +13,7 @@ flameshot &
 picom &
 copyq &
 dunst &
+psensor &
 nitrogen --restore &
-rnnoise activate &
 flatpak run org.qbittorrent.qBittorrent &
+flatpak run com.discordapp.Discord &

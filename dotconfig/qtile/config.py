@@ -51,7 +51,7 @@ vsCode = "flatpak run com.visualstudio.code"
 
 # Rofi Scripts
 rofi_launcher = "sh /home/fassih/.config/rofi/launchers/type-1/./launcher.sh"
-rofi_powermenu = "sh /home/fassih/.config/rofi/powermenu/type-4/./powermenu.sh"
+rofi_powermenu = "/home/fassih/.config/rofi/applets/bin/./powermenu.sh"
 applet_volume = "/home/fassih/.config/rofi/applets/bin/./volume.sh"
 applet_screenshot = "/home/fassih/.config/rofi/applets/bin/./screenshot.sh"
 applet_appasroot = "/home/fassih/.config/rofi/applets/bin/./appasroot.sh"
@@ -338,7 +338,7 @@ def init_widgets_list():
         widget.Spacer(length = 8),
         widget.Clock(
                  foreground = colors[1],
-                 format = "  %a, %b %d - %H:%M",
+                 format = "  %a, %b %d - %I:%M %p",
                  decorations=[
                      BorderDecoration(
                          colour = colors[8],
