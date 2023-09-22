@@ -1,4 +1,4 @@
-# Debian-Fassih: A Minimalistic Linux Configuration Repository
+# Debian-Fassih: A Minimalistic Debian Rice For My Work
 
 Welcome to the Debian-Fassih repository, where I document my Linux journey towards creating a streamlined and efficient system tailored for my work tasks. As I embark on this journey, I am focused on crafting a perfect minimalistic environment that aligns with my productivity needs.
 
